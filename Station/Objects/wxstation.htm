@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\wxstation.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\wxstation.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed May 16 10:58:30 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sun Jun 03 16:04:25 2018
 <BR><P>
-<H3>Maximum Stack Usage =        480 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        464 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; debug_printf &rArr; _doprint &rArr; mkfloatnumstr &rArr; __hardfp_modf &rArr; __aeabi_dsub
 <P>
@@ -295,7 +295,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ae]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 480 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 464 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; debug_printf &rArr; _doprint &rArr; mkfloatnumstr &rArr; __hardfp_modf &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1731,8 +1731,8 @@ Global Symbols
 <LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_init()
 </UL>
 
-<P><STRONG><a name="[1f]"></a>main</STRONG> (Thumb, 304 bytes, Stack size 112 bytes, temperature.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 480 + Unknown Stack Size
+<P><STRONG><a name="[1f]"></a>main</STRONG> (Thumb, 226 bytes, Stack size 96 bytes, temperature.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 464 + Unknown Stack Size
 <LI>Call Chain = main &rArr; debug_printf &rArr; _doprint &rArr; mkfloatnumstr &rArr; __hardfp_modf &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hardware_init

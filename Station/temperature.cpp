@@ -421,7 +421,7 @@ int main() {
 
 	hardware_init();
 	LED_Initialize();
-	debug_printf("Starting...\r\n");
+	//debug_printf("Starting...\r\n");
 	//i2c_setup();
 	//getCapabilities();
 	i2c_init();
@@ -436,14 +436,16 @@ int main() {
 		alt= getAltitude(press); //DO SOME MATH FOR ALT
 		clouds= getClouds(dewpoint, temp);
 		slp= getSLP(press, temp); //get sea level pressure
-		if (delimitter%10 == 0)
-				debug_printf("\r\n METAR CORNELL 160000Z UKN%03d %02d/%02d A%d \r\n", clouds, (int)temp, (int)dewpoint, slp);
-		if (delimitter%5 == 0)
-			debug_printf("\r\nTemp/Dewpoint | Pressure/Pressure Alt | Rel Humidity\r\n"); //EVERY 5 TIMES PRINT THE HEADER
-		debug_printf("%4.2fC/%4.2fC | %4.2f inHg/%4.2f ft | %4.2f%%\r\n", temp, dewpoint, press, alt, hum); //PRINT IT OUT
+		//if (delimitter%10 == 0)
+		//		debug_printf("\r\n METAR CORNELL 160000Z UKN%03d %02d/%02d A%d \r\n", clouds, (int)temp, (int)dewpoint, slp);
+		//if (delimitter%5 == 0)
+		//	debug_printf("\r\nTemp/Dewpoint | Pressure/Pressure Alt | Rel Humidity\r\n"); //EVERY 5 TIMES PRINT THE HEADER
+		debug_printf("%4.2f %4.2f %4.2f %4.2f \r\n", temp, dewpoint, press, hum); //PRINT IT OUT
 		short_delay();
 		LED_Off(); //TURN OFF LED WHEN FINISHED
 		long_delay(); //DELAY LOOP
+		long_delay();
+		long_delay();
 		long_delay();
 		delimitter++; //INCREMENT delimitter
 	}

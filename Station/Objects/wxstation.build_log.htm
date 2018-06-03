@@ -21,58 +21,20 @@ Target DLL:      CMSIS_AGDI.dll V1.28.3.0
 Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
-C:\Users\Liam Patterson\Dropbox\School 2017-2018\SP\ECE 3140\finalProject\wxstation.uvprojx
-Project File Date:  05/11/2018
+C:\Users\Liam Patterson\Dropbox\Projects\MiniWx\Station\wxstation.uvprojx
+Project File Date:  05/10/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'Target 1'
-compiling FXOS8700.c...
-compiling RTX_Conf_CM.c...
-compiling utils.c...
-compiling Buttons_FRDM_K64F.c...
-compiling gpio_pins.c...
-compiling board.c...
-compiling I2C_MK64F.c...
-compiling pin_mux.c...
+Build target 'Target 1'
 compiling temperature.cpp...
 temperature.cpp(405): warning:  #1035-D: single-precision operand implicitly converted to double-precision
   	 float fartemp = (temp*1.4)+32;
 temperature.cpp(406): warning:  #1035-D: single-precision operand implicitly converted to double-precision
   	 float fardew = (dew*1.4)+32;
 temperature.cpp: 2 warnings, 0 errors
-compiling fsl_gpio_common.c...
-compiling fsl_edma_common.c...
-compiling fsl_edma_driver.c...
-compiling startup.c...
-compiling fsl_rtc_common.c...
-compiling fsl_gpio_driver.c...
-compiling fsl_edma_irq.c...
-compiling fsl_rtc_driver.c...
-compiling fsl_dmamux_hal.c...
-compiling fsl_mcg_hal.c...
-compiling fsl_gpio_hal.c...
-compiling fsl_lptmr_hal.c...
-compiling fsl_i2c_hal.c...
-compiling fsl_edma_hal.c...
-compiling fsl_osc_hal.c...
-compiling fsl_mcg_hal_modes.c...
-compiling fsl_port_hal.c...
-compiling fsl_rtc_hal.c...
-compiling fsl_sim_hal_MK64F12.c...
-compiling fsl_uart_hal.c...
-compiling print_scan.c...
-compiling fsl_os_abstraction_bm.c...
-assembling startup_MK64F12.s...
-compiling fsl_clock_MK64F12.c...
-compiling fsl_clock_manager.c...
-compiling fsl_clock_manager_common.c...
-compiling fsl_interrupt_manager.c...
-compiling fsl_debug_console.c...
-compiling hardware_init.c...
-compiling system_MK64F12.c...
 linking...
-Program Size: Code=29864 RO-data=2752 RW-data=136 ZI-data=5372  
+Program Size: Code=29640 RO-data=2752 RW-data=136 ZI-data=5372  
 ".\Objects\wxstation.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -147,14 +109,14 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup:2.8
       Source file:   platform\devices\startup.c
-      Include file:  addon_cmsis\Driver\MK64F\Config\RTE_Device.h
-      Source file:   platform\devices\MK64F12\startup\system_MK64F12.c
-      Source file:   platform\devices\MK64F12\startup\arm\startup_MK64F12.s
       Include file:  platform\devices\MK64F12\startup\system_MK64F12.h
+      Source file:   platform\devices\MK64F12\startup\arm\startup_MK64F12.s
+      Source file:   platform\devices\MK64F12\startup\system_MK64F12.c
+      Include file:  addon_cmsis\Driver\MK64F\Config\RTE_Device.h
 
    * Component: Keil::Device:KSDK Utility:Debug Console:1.2.0
-      Include file:  platform\utilities\inc\fsl_debug_console.h
       Source file:   platform\utilities\src\fsl_debug_console.c
+      Include file:  platform\utilities\inc\fsl_debug_console.h
       Source file:   platform\utilities\src\print_scan.c
 
    * Component: Keil::Device:KSDK System:Interrupt:1.2.0
@@ -162,26 +124,26 @@ Package Vendor: Keil
       Source file:   platform\system\src\interrupt\fsl_interrupt_manager.c
 
    * Component: Keil::Device:KSDK System:Clock:1.2.0
-      Source file:   platform\system\src\clock\MK64F12\fsl_clock_MK64F12.c
+      Include file:  platform\system\inc\fsl_clock_manager.h
       Source file:   platform\system\src\clock\fsl_clock_manager_common.c
       Source file:   platform\system\src\clock\fsl_clock_manager.c
-      Include file:  platform\system\inc\fsl_clock_manager.h
+      Source file:   platform\system\src\clock\MK64F12\fsl_clock_MK64F12.c
 
    * Component: Keil::Device:KSDK OSA:OSA:Bare Metal:1.2.0
       Include file:  platform\osa\inc\fsl_os_abstraction.h
       Source file:   platform\osa\src\fsl_os_abstraction_bm.c
 
    * Component: Keil::Device:KSDK HAL:eDMA:1.2.0
-      Source file:   platform\hal\src\edma\fsl_edma_hal.c
       Include file:  platform\hal\inc\fsl_edma_hal.h
+      Source file:   platform\hal\src\edma\fsl_edma_hal.c
 
    * Component: Keil::Device:KSDK HAL:UART:1.2.0
-      Include file:  platform\hal\inc\fsl_uart_hal.h
       Source file:   platform\hal\src\uart\fsl_uart_hal.c
+      Include file:  platform\hal\inc\fsl_uart_hal.h
 
    * Component: Keil::Device:KSDK HAL:SIM:1.2.0
-      Include file:  platform\hal\inc\fsl_sim_hal.h
       Source file:   platform\hal\src\sim\MK64F12\fsl_sim_hal_MK64F12.c
+      Include file:  platform\hal\inc\fsl_sim_hal.h
 
    * Component: Keil::Device:KSDK HAL:RTC:1.2.0
       Source file:   platform\hal\src\rtc\fsl_rtc_hal.c
@@ -192,18 +154,18 @@ Package Vendor: Keil
       Include file:  platform\hal\inc\fsl_port_hal.h
 
    * Component: Keil::Device:KSDK HAL:OSC:1.2.0
-      Include file:  platform\hal\inc\fsl_osc_hal.h
       Source file:   platform\hal\src\osc\fsl_osc_hal.c
+      Include file:  platform\hal\inc\fsl_osc_hal.h
 
    * Component: Keil::Device:KSDK HAL:MCG:1.2.0
-      Source file:   platform\hal\src\mcg\fsl_mcg_hal.c
+      Include file:  platform\hal\inc\fsl_mcg_hal.h
       Source file:   platform\hal\src\mcg\fsl_mcg_hal_modes.c
       Include file:  platform\hal\inc\fsl_mcg_hal_modes.h
-      Include file:  platform\hal\inc\fsl_mcg_hal.h
+      Source file:   platform\hal\src\mcg\fsl_mcg_hal.c
 
    * Component: Keil::Device:KSDK HAL:LPTMR:1.2.0
-      Source file:   platform\hal\src\lptmr\fsl_lptmr_hal.c
       Include file:  platform\hal\inc\fsl_lptmr_hal.h
+      Source file:   platform\hal\src\lptmr\fsl_lptmr_hal.c
 
    * Component: Keil::Device:KSDK HAL:I2C:1.2.0
       Source file:   platform\hal\src\i2c\fsl_i2c_hal.c
@@ -214,35 +176,35 @@ Package Vendor: Keil
       Source file:   platform\hal\src\gpio\fsl_gpio_hal.c
 
    * Component: Keil::Device:KSDK HAL:DMAMUX:1.2.0
-      Source file:   platform\hal\src\dmamux\fsl_dmamux_hal.c
       Include file:  platform\hal\inc\fsl_dmamux_hal.h
+      Source file:   platform\hal\src\dmamux\fsl_dmamux_hal.c
 
    * Component: Keil::Device:KSDK Driver:eDMA:1.2.0
-      Source file:   platform\drivers\src\edma\fsl_edma_driver.c
       Include file:  platform\drivers\inc\fsl_edma_driver.h
-      Source file:   platform\drivers\src\edma\fsl_edma_irq.c
-      Source file:   platform\drivers\src\edma\fsl_edma_lpm_callback.c
       Source file:   platform\drivers\src\edma\fsl_edma_common.c
+      Source file:   platform\drivers\src\edma\fsl_edma_lpm_callback.c
+      Source file:   platform\drivers\src\edma\fsl_edma_irq.c
+      Source file:   platform\drivers\src\edma\fsl_edma_driver.c
 
    * Component: Keil::Device:KSDK Driver:RTC:1.2.0
-      Source file:   platform\drivers\src\rtc\fsl_rtc_driver.c
-      Include file:  platform\drivers\inc\fsl_rtc_driver.h
       Source file:   platform\drivers\src\rtc\fsl_rtc_common.c
+      Include file:  platform\drivers\inc\fsl_rtc_driver.h
       Source file:   platform\drivers\src\rtc\fsl_rtc_irq.c
       Source file:   platform\drivers\src\rtc\fsl_rtc_lpm_callback.c
+      Source file:   platform\drivers\src\rtc\fsl_rtc_driver.c
 
    * Component: Keil::Device:KSDK Driver:GPIO:1.2.0
-      Include file:  platform\drivers\inc\fsl_gpio_driver.h
-      Source file:   platform\drivers\src\gpio\fsl_gpio_irq.c
-      Source file:   platform\drivers\src\gpio\fsl_gpio_driver.c
-      Source file:   platform\drivers\src\gpio\fsl_gpio_common.c
       Source file:   platform\drivers\src\gpio\fsl_gpio_lpm_callback.c
+      Source file:   platform\drivers\src\gpio\fsl_gpio_common.c
+      Include file:  platform\drivers\inc\fsl_gpio_driver.h
+      Source file:   platform\drivers\src\gpio\fsl_gpio_driver.c
+      Source file:   platform\drivers\src\gpio\fsl_gpio_irq.c
 
    * Component: Keil::Device:KSDK Configuration:FRDM-K64F:1.2.0
-      Include file:  examples\frdmk64f\board.h
-      Source file:   examples\frdmk64f\board.c
-      Source file:   examples\frdmk64f\pin_mux.c
       Source file:   examples\frdmk64f\gpio_pins.c
+      Include file:  examples\frdmk64f\board.h
+      Source file:   examples\frdmk64f\pin_mux.c
+      Source file:   examples\frdmk64f\board.c
       Source file:   examples\frdmk64f\hardware_init.c
 
    * Component: Keil::CMSIS Driver:I2C:1.3
@@ -255,19 +217,19 @@ Package Vendor: Keil
       Source file:   addon_mdk\Boards\NXP\FRDM-K64F\Common\FXOS8700.c
 
    * Component: ARM::CMSIS:RTOS:Keil RTX:4.81.0
-      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MsgQueue.c
       Source file:   CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Timer.c
-      Source file:   CMSIS\RTOS\RTX\SRC\ARM\SVC_Table.s
+      Include file:  CMSIS\RTOS\RTX\INC\cmsis_os.h
+      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MailQueue.c
+      Source file:   CMSIS\RTOS\RTX\SRC\ARM\SVC_Table.s
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MemPool.c
       Library file:  CMSIS\RTOS\RTX\LIB\ARM\RTX_CM4.lib
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Semaphore.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Thread.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Mutex.c
-      Include file:  CMSIS\RTOS\RTX\INC\cmsis_os.h
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Semaphore.c
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Timer.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MsgQueue.c
 
    * Component: ARM::CMSIS:CORE:5.0.1
 
@@ -283,7 +245,7 @@ Package Vendor: Keil
 
    * Component: ::Board Support:Accelerometer:1.0.0 (API)
       Include file:  Board\Board_Accelerometer.h
-Build Time Elapsed:  00:02:00
+Build Time Elapsed:  00:00:07
 </pre>
 </body>
 </html>
